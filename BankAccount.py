@@ -5,20 +5,22 @@ class BankAccount(self):
     self.balance = account_balance
     self.type = account_type
 
-  def deposit(self):
-    pass
+  def deposit(self, amount):
+    self.balance += amount
+    return self.balance
 
-  def withdrawl(self):
-    pass
+  def withdrawl(self, amount):
+    self.balance -= amount
+    return self.balance
 
   def get_balance(self):
-    pass 
+    return self.balance 
 
   def add_interest(self):
     pass 
 
   def print_statement(self):
-    pass
+    print(f'{self.full_name} \n Account No.: {self.account_number} \n Balance: {self.balance}')
 
 john_doe_account = BankAccount()
 omar_jandali_account = BankAccount()
